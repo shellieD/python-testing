@@ -13,4 +13,14 @@ class Student:
 
     @property
     def full_name(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self._first_name} {self._last_name}"
+
+    def alert_santa(self):
+        self.naughty_list = True
+
+    @property
+    def email_address(self):
+        return f"{self._first_name.lower()}.{self._last_name.lower()}@email.com"
+
+    def apply_extension(self, days):
+        self.end_date = self.end_date + timedelta(days=days)
